@@ -1,0 +1,25 @@
+{
+  "name": "such-docs",
+  "version": "0.0.0",
+  "description": "generate an interactive api docs for your app",
+  "main": "index.js",
+  "bin": {
+    "such-docs": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "docs",
+    "api",
+    "interactive"
+  ],
+  "author": "David Dias <daviddias.p@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "read": "~1.0.5",
+    "node-static": "~0.7.3",
+    "optimist": "~0.6.0",
+    "colors": "~0.6.2"
+  }
+}
