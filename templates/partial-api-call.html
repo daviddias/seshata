@@ -1,0 +1,29 @@
+
+    <div id="route-weapons">
+      <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/weapons" data-target=".route-weapons" data-truncate="20">GET</a> /api/weapons</h3>
+      <pre><code class="route-weapons"></code></pre>
+    </div>
+    <div id="route-weapons-2">
+      <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/weapons/2" data-target=".route-weapons-2">GET</a> /api/weapons/2</h3>
+      <pre><code class="route-weapons-2"></code></pre>
+    </div>
+    <div id="route-weapons-filter">
+      <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/weapons?filter[where][effectiveRange][gt]=900&filter[limit]=3" data-target=".route-weapons-filter">GET</a> /api/weapons?filter</h3>
+      <p>Actual request: <code>GET /api/weapons?filter[where][effectiveRange][gt]=900&filter[limit]=3</code> (The top three weapons with a range over 900m)</p>
+      <pre><code class="route-weapons-filter"></code></pre>
+    </div>
+    <div id="route-locations">
+      <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/locations" data-target=".route-locations" data-truncate="20">GET</a> /api/locations</h3>
+      <pre><code class="route-locations"></code></pre>
+    </div>
+    <div id="route-locations-nearby">
+      <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/locations/nearby?here[lat]=37.587409&here[lng]=-122.338225" data-target=".route-locations-nearby" data-truncate="20">GET</a> /api/locations/nearby</h3>
+      <p>Actual request: <code>GET /api/locations/nearby?here[lat]=37.587409&here[lng]=-122.338225</code></p>
+      <pre><code class="route-locations-nearby"></code></pre>
+    </div>
+    <div id="route-locations-inventory">
+      <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/locations/5/inventory" data-target=".route-locations-inventory" data-truncate="20">GET</a> /api/locations/:id/inventory</h3>
+      <p>Actual request: <code>GET /api/locations/5/inventory</code></p>
+      <pre><code class="route-locations-inventory"></code></pre>
+    </div>
+
