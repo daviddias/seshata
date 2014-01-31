@@ -1,0 +1,47 @@
+{
+ "title": "my API docs",
+ "api-calls": [
+    {
+      "id": "route-weapons",
+      "method": "GET",
+      "data-route": "/api/weapons",
+      "data-target": "route-weapons",
+      "data-truncate": "20"
+    },
+    {
+      "id": "route-weapons-2",
+      "method": "GET",
+      "data-route": "/api/weapons/2",
+      "data-target": "route-weapons-2",
+      "data-truncate": "20"
+    },
+    {
+      "id": "route-weapons-filter",
+      "method": "GET",
+      "data-route": "/api/weapons?filter[where][effectiveRange][gt]=900&filter[limit]=3",
+      "data-target": ".route-weapons-filter",
+      "data-truncate": "20"
+    },
+    {
+      "id": "route-locations",
+      "method": "GET",
+      "data-route": "/api/locations", 
+      "data-target": ".route-locations",
+      "data-truncate": "20"
+    },
+    {
+      "id": "route-locations-nearby",
+      "method": "GET",
+      "data-route": "/api/locations/nearby?here[lat]=37.587409&here[lng]=-122.338225",
+      "data-target": ".route-locations-nearby",
+      "data-truncate": "20"
+    },
+    {
+      "id": "route-locations-inventory",
+      "method": "GET",
+      "data-route": "/api/locations/5/inventory",
+      "data-target": ".route-locations-inventory",
+      "data-truncate": "20"
+    }
+ ] 
+}

@@ -3,7 +3,6 @@ var ncp   = require('ncp').ncp;
 var path  = require('path');
 
 function createFolder(_path) {
-  console.log('HEY',_path);
   if (!fs.existsSync(_path)) {
     fs.mkdirSync(_path);
   }
@@ -14,7 +13,6 @@ function createFolder(_path) {
 function copyAssets(_path) {
   ncp.limit = 16;
 
-  console.log(__dirname);
   ncp(path.join(__dirname, '..', '/assets/css'),
    path.join(_path, '/css'), function (err) {
     if (err) {
