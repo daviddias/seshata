@@ -20,7 +20,7 @@ function gen(args) {
     if (! _apiMapPath) {
       error('Needs an api map');
     }
-    path(function(_path) {
+    path(function(_suchpath) {
       generate(_apiMapPath, _path);
     });
   });
