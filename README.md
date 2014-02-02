@@ -13,7 +13,7 @@ Originaly created for: http://percent.io/
 
 Prepare
 ```
-$ git clone 
+$ git clone git@github.com:diasdavid/seshat.git
 $ cd seshat
 $ npm link
 ```
