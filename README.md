@@ -12,7 +12,7 @@
 
 ![](https://i.cloudup.com/eABDXnuXf0-3000x3000.png)
 
-#### No more mockups, no more non-updated documentation (well, sort of, I'm sure this a lil more to go to find the panacea of documentation)
+#### No more mockups, no more non-updated documentation (well, sort of, I'm sure there is a 'lil' more to go to find the panacea of documentation :))
 
 
 ### How to use
