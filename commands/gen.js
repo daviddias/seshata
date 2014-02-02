@@ -21,7 +21,7 @@ function gen(args) {
       error('Needs an api map');
     }
     path(function(_suchpath) {
-      generate(_apiMapPath, _path);
+      generate(_apiMapPath, _suchpath);
     });
   });
 
@@ -42,7 +42,7 @@ function gen(args) {
   function path(cb) {
     var _path = args._[1];
     if (! _path) {
-      return cb('public');
+      return cb('./public');
     }
     cb(_path);
   }
