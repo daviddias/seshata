@@ -1,39 +1,67 @@
-seshat - Create your interactive API
+**seshat** - Create your interactive API
 ============
 
 **seshat** is a new way to document your API, without documenting anything at all! Just let your users try it, live! 
 
+It's simple, first you define all your API calls available
 
-seshat: 
+![](https://i.cloudup.com/36dV5tgoeP-3000x3000.png)
 
+Second, when a user clicks on a specific API call, he gets a live answer
 
+![](https://i.cloudup.com/eABDXnuXf0-3000x3000.png)
+
+No more mockups, no more non-updated documentation (well, sort of, I'm sure this a lil more to go to find the panacea of documentation)
 
 
 ### How to use
 
-Prepare
+Map your api in a `api-map.json` file:
+
+```javascript
+{
+ "title": "my API docs",
+ "api-calls": [
+    {
+      "id": "route-user",
+      "method": "GET",
+      "data-route": "/api/user",
+      "simple-route": "/api/user",
+      "data-target": "route-user",
+      "data-body": {},
+      "data-truncate": "20"
+    },
+    ...
 ```
+full example [here](https://github.com/diasdavid/seshat/blob/master/seshat-playground/api-map.json)
+
+Download the module by
+
+```bash
 $ git clone git@github.com:diasdavid/seshat.git
 $ cd seshat
 $ npm link
 ```
 
+or(once it is on NPM)
+```bash
+$ npm install -g seshat
+```
 
-Generating API Docs
+After this, all you need to gen your API Docs is:
 ```bash
 $ seshat gen <api-map.json> [<output-folder>]
 ```
 
-### How to test
+### Want to try it out first?
 
 ```bash
-$ cd seshat-playground
+$ git clone git@github.com:diasdavid/seshat.git
+$ cd seshat/seshat-playground
 $ seshat gen api-map.json
 $ node index.js
 # open your browser in localhost:8080
 ```
-
-:)
 
 ### Why **seshat**?
 
