@@ -23,17 +23,9 @@
       <ul class="nav nav-pills nav-stacked">
         <li class="depth-1"><a href="#welcome">Welcome</a></li>
         
-          <li class="depth-3"><a href="#route-weapons">GET /api/weapons</a></li>
+          <li class="depth-3"><a href="#route-user">GET /api/user</a></li>
         
-          <li class="depth-3"><a href="#route-weapons-2">GET /api/weapons/2</a></li>
-        
-          <li class="depth-3"><a href="#route-weapons-filter">GET /api/weapons?filter</a></li>
-        
-          <li class="depth-3"><a href="#route-locations">GET /api/locations</a></li>
-        
-          <li class="depth-3"><a href="#route-locations-nearby">GET /api/locations/nearby</a></li>
-        
-          <li class="depth-3"><a href="#route-locations-inventory">GET /api/locations/:id/inventory</a></li>
+          <li class="depth-3"><a href="#route-user-foo">GET /api/user/foo</a></li>
         
       </ul>
     </div>
@@ -44,58 +36,22 @@
         <h2 id="sample-requests">Sample Requests</h2>
         <p>Click on the friendly GET buttons below to try out a few example requests!</p>
         
-          <div id="route-weapons">
+          <div id="route-user">
             <h3><a href="#" 
                    class="btn btn-success btn-lg" 
-                   data-route="/api/weapons" 
-                   data-target=".route-weapons" 
-                   data-truncate="20">GET</a> /api/weapons</h3>
-            <pre><code class="route-weapons"></code></pre>
+                   data-route="/api/user" 
+                   data-target=".route-user" 
+                   data-truncate="20">GET</a> /api/user</h3>
+            <pre><code class="route-user"></code></pre>
           </div>
         
-          <div id="route-weapons-2">
+          <div id="route-user-foo">
             <h3><a href="#" 
                    class="btn btn-success btn-lg" 
-                   data-route="/api/weapons/2" 
-                   data-target=".route-weapons-2" 
-                   data-truncate="20">GET</a> /api/weapons/2</h3>
-            <pre><code class="route-weapons-2"></code></pre>
-          </div>
-        
-          <div id="route-weapons-filter">
-            <h3><a href="#" 
-                   class="btn btn-success btn-lg" 
-                   data-route="/api/weapons?filter[where][effectiveRange][gt]=900&filter[limit]=3" 
-                   data-target=".route-weapons-filter" 
-                   data-truncate="20">GET</a> /api/weapons?filter[where][effectiveRange][gt]=900&filter[limit]=3</h3>
-            <pre><code class="route-weapons-filter"></code></pre>
-          </div>
-        
-          <div id="route-locations">
-            <h3><a href="#" 
-                   class="btn btn-success btn-lg" 
-                   data-route="/api/locations" 
-                   data-target=".route-locations" 
-                   data-truncate="20">GET</a> /api/locations</h3>
-            <pre><code class="route-locations"></code></pre>
-          </div>
-        
-          <div id="route-locations-nearby">
-            <h3><a href="#" 
-                   class="btn btn-success btn-lg" 
-                   data-route="/api/locations/nearby?here[lat]=37.587409&here[lng]=-122.338225" 
-                   data-target=".route-locations-nearby" 
-                   data-truncate="20">GET</a> /api/locations/nearby?here[lat]=37.587409&here[lng]=-122.338225</h3>
-            <pre><code class="route-locations-nearby"></code></pre>
-          </div>
-        
-          <div id="route-locations-inventory">
-            <h3><a href="#" 
-                   class="btn btn-success btn-lg" 
-                   data-route="/api/locations/5/inventory" 
-                   data-target=".route-locations-inventory" 
-                   data-truncate="20">GET</a> /api/locations/5/inventory</h3>
-            <pre><code class="route-locations-inventory"></code></pre>
+                   data-route="/api/user/foo" 
+                   data-target=".route-user-foo" 
+                   data-truncate="20">GET</a> /api/user/foo</h3>
+            <pre><code class="route-user-foo"></code></pre>
           </div>
         
         <div class="intentionally-left-blank"></div>

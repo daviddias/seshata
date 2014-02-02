@@ -2,51 +2,19 @@
  "title": "my API docs",
  "api-calls": [
     {
-      "id": "route-weapons",
+      "id": "route-user",
       "method": "GET",
-      "data-route": "/api/weapons",
-      "simple-route": "/api/weapons",
-      "data-target": "route-weapons",
+      "data-route": "/api/user",
+      "simple-route": "/api/user",
+      "data-target": "route-user",
       "data-truncate": "20"
     },
     {
-      "id": "route-weapons-2",
+      "id": "route-user-foo",
       "method": "GET",
-      "data-route": "/api/weapons/2",
-      "simple-route": "/api/weapons/2",
-      "data-target": "route-weapons-2",
-      "data-truncate": "20"
-    },
-    {
-      "id": "route-weapons-filter",
-      "method": "GET",
-      "data-route": "/api/weapons?filter[where][effectiveRange][gt]=900&filter[limit]=3",
-      "simple-route": "/api/weapons?filter",
-      "data-target": "route-weapons-filter",
-      "data-truncate": "20"
-    },
-    {
-      "id": "route-locations",
-      "method": "GET",
-      "data-route": "/api/locations", 
-      "simple-route": "/api/locations",
-      "data-target": "route-locations",
-      "data-truncate": "20"
-    },
-    {
-      "id": "route-locations-nearby",
-      "method": "GET",
-      "data-route": "/api/locations/nearby?here[lat]=37.587409&here[lng]=-122.338225",
-      "simple-route": "/api/locations/nearby",
-      "data-target": "route-locations-nearby",
-      "data-truncate": "20"
-    },
-    {
-      "id": "route-locations-inventory",
-      "method": "GET",
-      "data-route": "/api/locations/5/inventory",
-      "simple-route": "/api/locations/:id/inventory",
-      "data-target": "route-locations-inventory",
+      "data-route": "/api/user/foo",
+      "simple-route": "/api/user/foo",
+      "data-target": "route-user-foo",
       "data-truncate": "20"
     }
  ] 

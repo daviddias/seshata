@@ -18,7 +18,6 @@ function copyAssets(_path) {
     if (err) {
       return console.error(err);
     }
-    console.log('done!');
   });
 
   ncp(path.join(__dirname, '..', '/assets/fonts'),
@@ -26,7 +25,6 @@ function copyAssets(_path) {
     if (err) {
       return console.error(err);
     }
-    console.log('done!');
   });
 
   ncp(path.join(__dirname, '..', '/assets/js'),
@@ -34,7 +32,6 @@ function copyAssets(_path) {
     if (err) {
       return console.error(err);
     }
-    console.log('done!');
   });
 
 }
