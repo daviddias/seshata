@@ -31,7 +31,6 @@ $(document).ready(function () {
   }
 
   $('[data-route]').each(function () {
-    // For now, GET only.
     var $this = $(this);
     var $target = $($this.attr('data-target'));
     var route = $this.attr('data-route');
