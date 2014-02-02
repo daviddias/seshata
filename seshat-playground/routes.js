@@ -41,3 +41,29 @@ server.route({
   }
 });
 
+server.route({
+  method: 'POST',
+  path: '/api/user',
+  handler: function(request, reply) {
+    console.log(request.payload);
+    reply(users);
+  }
+});
+
+server.route({
+  method: 'PUT',
+  path: '/api/user',
+  handler: function(request, reply) {
+    console.log(request.payload);
+    reply(users);
+  }
+});
+
+server.route({
+  method: 'DELETE',
+  path: '/api/user',
+  handler: function(request, reply) {
+    console.log(request.payload);
+    reply(users);
+  }
+});

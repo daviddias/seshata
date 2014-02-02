@@ -17,7 +17,7 @@ $(document).ready(function () {
   });
 
   function truncate(json, length) {
-    if (length == null) {
+    if (length === null) {
       length = 20;
     }
 
@@ -37,10 +37,21 @@ $(document).ready(function () {
     var route = $this.attr('data-route');
     var length = $this.attr('data-truncate') || Infinity;
 
+    var method = $this.attr('data-method');
+    var body = $this.attr('data-body');
+    // lil hack to make it work
+    var body_ready = JSON.parse(body.split('\'').join('\"'));
+    // console.log('method is: ', method);
+    // console.log('body is: ', body);
+    // console.log('body json parsed is', JSON.parse(body.split('\'').join('\"')));
+    // console.log(body.toString());
+
     $this.click(function () {
       $target.text('Loading ' + route + ' ...');
 
       $.ajax(route, {
+        type: method,
+        data: body_ready,
         success: function (data) {
           var json = truncate(JSON.stringify(data, null, 2), length);
           $target.text(json);

@@ -6,8 +6,6 @@ function createFolder(_path) {
   if (!fs.existsSync(_path)) {
     fs.mkdirSync(_path);
   }
-
-
 }
 
 function copyAssets(_path) {

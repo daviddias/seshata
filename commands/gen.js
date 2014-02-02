@@ -14,8 +14,6 @@ function usage(name, args) {
 function gen(args) {
   console.log('→ Gen API Docs'.yellow);
 
-
-
   apiMapPath(function(_apiMapPath) {
     if (! _apiMapPath) {
       error('Needs an api map');
