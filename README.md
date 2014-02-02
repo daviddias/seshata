@@ -3,15 +3,16 @@
 
 **seshat** is a new way to document your API, without documenting anything at all! Just let your users try it, live! 
 
-It's simple, first you define all your API calls available
+
+#### It's simple, first you define all your API calls available
 
 ![](https://i.cloudup.com/36dV5tgoeP-3000x3000.png)
 
-Second, when a user clicks on a specific API call, he gets a live answer
+#### Second, when a user clicks on a specific API call, he gets a live answer
 
 ![](https://i.cloudup.com/eABDXnuXf0-3000x3000.png)
 
-No more mockups, no more non-updated documentation (well, sort of, I'm sure this a lil more to go to find the panacea of documentation)
+#### No more mockups, no more non-updated documentation (well, sort of, I'm sure this a lil more to go to find the panacea of documentation)
 
 
 ### How to use
