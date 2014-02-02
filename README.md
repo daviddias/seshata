@@ -74,6 +74,4 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Seshat)
 
 ### Acknowledgements
 
-Inspired by: https://github.com/strongloop/sls-sample-app-cookbook
-Idea by: https://github.com/pgte
-Originaly created for: http://percent.io/
+The original idea for seshat is from [Pedro Teixeira](https://github.com/pgte), he was the one having the vision and suggested me to do it :) Thank you Pedro! Also, it was inspired by the [sls-sample-app-coobook](https://github.com/strongloop/sls-sample-app-cookbook), which uses this interactive technique 
