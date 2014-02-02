@@ -60,6 +60,7 @@ $ seshat gen <api-map.json> [<output-folder>]
 $ git clone git@github.com:diasdavid/seshat.git
 $ cd seshat/seshat-playground
 $ seshat gen api-map.json
+$ npm install
 $ node index.js
 # open your browser in localhost:8080
 ```
