@@ -31,7 +31,6 @@ $(document).ready(function () {
   }
 
   $('[data-route]').each(function () {
-    // For now, GET only.
     var $this = $(this);
     var $target = $($this.attr('data-target'));
     var route = $this.attr('data-route');
@@ -41,10 +40,6 @@ $(document).ready(function () {
     var body = $this.attr('data-body');
     // lil hack to make it work
     var body_ready = JSON.parse(body.split('\'').join('\"'));
-    // console.log('method is: ', method);
-    // console.log('body is: ', body);
-    // console.log('body json parsed is', JSON.parse(body.split('\'').join('\"')));
-    // console.log(body.toString());
 
     $this.click(function () {
       $target.text('Loading ' + route + ' ...');

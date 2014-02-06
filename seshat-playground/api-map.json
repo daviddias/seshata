@@ -6,7 +6,6 @@
       "method": "GET",
       "data-route": "/api/user",
       "simple-route": "/api/user",
-      "data-target": "route-user",
       "data-body": {},
       "data-truncate": "20"
     },
@@ -14,8 +13,7 @@
       "id": "route-user-foo",
       "method": "GET",
       "data-route": "/api/user/foo",
-      "simple-route": "/api/user/foo",
-      "data-target": "route-user-foo",
+      "simple-route": "/api/user/:username",
       "data-body": {},
       "data-truncate": "20"
     },
@@ -24,7 +22,6 @@
       "method": "POST",
       "data-route": "/api/user",
       "simple-route": "/api/user",
-      "data-target": "route-user-post",
       "data-body": {
           "hello":"world"
         },
@@ -35,7 +32,6 @@
       "method": "PUT",
       "data-route": "/api/user",
       "simple-route": "/api/user",
-      "data-target": "route-user-put",
       "data-body": {
           "hello":"world"
         },
@@ -46,7 +42,6 @@
       "method": "DELETE",
       "data-route": "/api/user",
       "simple-route": "/api/user",
-      "data-target": "route-user-delete",
       "data-body": {
           "hello":"world"
         },

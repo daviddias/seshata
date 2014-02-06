@@ -23,7 +23,7 @@
       <ul class="nav nav-pills nav-stacked">
         <li class="depth-1"><a href="#welcome">Welcome</a></li>
         {{#each api-calls}}
-          <li class="depth-3"><a href="#{{id}}">{{method}} {{simple-route}}</a></li>
+          <li class="depth-3"><a href="#{{id}}">{{method}} {{{simple-route}}}</a></li>
         {{/each}}
       </ul>
     </div>
@@ -38,11 +38,11 @@
             <h3><a href="#" 
                    class="btn btn-success btn-lg" 
                    data-route="{{{data-route}}}" 
-                   data-target=".{{data-target}}" 
+                   data-target=".{{id}}" 
                    data-body="{{{json data-body}}}"
                    data-method="{{method}}"
-                   data-truncate="{{data-truncate}}">{{method}}</a> {{{data-route}}}</h3>
-            <pre><code class="{{data-target}}"></code></pre>
+                   data-truncate="{{data-truncate}}">{{method}}</a> {{{simple-route}}}</h3>                   
+            <pre><code class="{{id}}"></code></pre>
           </div>
         {{/each}}
         <div class="intentionally-left-blank"></div>
