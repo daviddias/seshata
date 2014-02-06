@@ -7,7 +7,8 @@
       "data-route": "/api/user",
       "simple-route": "/api/user",
       "data-body": {},
-      "data-truncate": "20"
+      "edit-body": false,
+      "data-truncate": "20"   
     },
     {
       "id": "route-user-foo",
@@ -15,6 +16,7 @@
       "data-route": "/api/user/foo",
       "simple-route": "/api/user/:username",
       "data-body": {},
+      "edit-body": false,
       "data-truncate": "20"
     },
     {
@@ -25,6 +27,7 @@
       "data-body": {
           "hello":"world"
         },
+      "edit-body": true,
       "data-truncate": "20"
     },
     {
@@ -35,6 +38,7 @@
       "data-body": {
           "hello":"world"
         },
+      "edit-body": true,
       "data-truncate": "20"
     },
     {
@@ -45,6 +49,7 @@
       "data-body": {
           "hello":"world"
         },
+      "edit-body": true,  
       "data-truncate": "20"
     }
  ] 
