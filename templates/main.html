@@ -39,9 +39,13 @@
                    class="btn btn-success btn-lg" 
                    data-route="{{{data-route}}}" 
                    data-target=".{{id}}" 
-                   data-body="{{{json data-body}}}"
+                   data-body="{{{json-hack data-body}}}"
                    data-method="{{method}}"
                    data-truncate="{{data-truncate}}">{{method}}</a> {{{simple-route}}}</h3>                   
+            {{#if edit-body}}
+            <pre><code class="">{{{json data-body}}}</code></pre>
+            {{/if}}
+
             <pre><code class="{{id}}"></code></pre>
           </div>
         {{/each}}
