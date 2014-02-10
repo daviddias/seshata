@@ -1,6 +1,6 @@
 {
   "name": "seshata",
-  "version": "0.2.0",
+  "version": "0.2.0-1",
   "description": "generate an interactive api docs for your app",
   "main": "index.js",
   "bin": {
