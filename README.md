@@ -1,7 +1,7 @@
-**seshat** - Create your interactive API
+**seshata** - Create your interactive API
 ============
 
-**seshat** is a new way to document your API, without documenting anything at all! Just let your users try it, live! 
+**seshata** is a new way to document your API, without documenting anything at all! Just let your users try it, live! 
 
 
 #### It's simple, first you define all your API calls available
@@ -39,33 +39,33 @@ full example [here](https://github.com/diasdavid/seshat/blob/master/seshat-playg
 Download the module by
 
 ```bash
-$ git clone git@github.com:diasdavid/seshat.git
-$ cd seshat
+$ git clone git@github.com:diasdavid/seshata.git
+$ cd seshats
 $ npm link
 ```
 
 or(once it is on NPM)
 ```bash
-$ npm install -g seshat
+$ npm install -g seshata
 ```
 
 After this, all you need to gen your API Docs is:
 ```bash
-$ seshat gen <api-map.json> [<output-folder>]
+$ seshata gen <api-map.json> [<output-folder>]
 ```
 
 ### Want to try it out first?
 
 ```bash
-$ git clone git@github.com:diasdavid/seshat.git
-$ cd seshat/seshat-playground
-$ seshat gen api-map.json
+$ git clone git@github.com:diasdavid/seshata.git
+$ cd seshata/seshata-playground
+$ seshata gen api-map.json
 $ npm install
 $ node index.js
 # open your browser in localhost:8080
 ```
 
-### Why **seshat**?
+### Why **seshata**?
 
 ![Seshat](http://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Seshat.svg/200px-Seshat.svg.png)
 
