@@ -1,10 +1,10 @@
 {
-  "name": "seshat",
+  "name": "seshata",
   "version": "0.2.0",
   "description": "generate an interactive api docs for your app",
   "main": "index.js",
   "bin": {
-    "seshat": "index.js"
+    "seshata": "index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

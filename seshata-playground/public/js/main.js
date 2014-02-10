@@ -43,9 +43,7 @@ $(document).ready(function () {
     $this.click(function () {
       var body_ready;
 
-      if (body === ''){
-        console.log('hey!');
-      } else {
+      if (body !== ''){
         var editable_body = $this.attr('data-target') + '-data-body';
         body_ready = JSON.parse($(editable_body).text());
       }

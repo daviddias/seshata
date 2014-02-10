@@ -10,7 +10,7 @@ module.exports = function (_apiMapPath, _path){
 
 function generate(_apiMapPath, _path) {
   Handlebars.registerHelper('json-hack', function(context) {
-    if(!context){
+    if(!context) {
       return '';
     }
     return JSON.stringify(context).split('\"').join('\'');
