@@ -38,10 +38,17 @@ $(document).ready(function () {
 
     var method = $this.attr('data-method');
     var body = $this.attr('data-body');
-    // lil hack to make it work
-    var body_ready = JSON.parse(body.split('\'').join('\"'));
 
+    
     $this.click(function () {
+      var body_ready;
+
+      if (body !== ''){
+        var editable_body = $this.attr('data-target') + '-data-body';
+        body_ready = JSON.parse($(editable_body).text());
+      }
+
+
       $target.text('Loading ' + route + ' ...');
 
       $.ajax(route, {
@@ -52,8 +59,6 @@ $(document).ready(function () {
           $target.text(json);
         }
       });
-
-      console.log($this.attr('data-route'));
     });
   });
 });

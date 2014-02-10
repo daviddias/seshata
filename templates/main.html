@@ -42,8 +42,8 @@
                    data-body="{{{json-hack data-body}}}"
                    data-method="{{method}}"
                    data-truncate="{{data-truncate}}">{{method}}</a> {{{simple-route}}}</h3>                   
-            {{#if edit-body}}
-            <pre><code class="">{{{json data-body}}}</code></pre>
+            {{#if data-body}}
+            <pre>Request body:<code contenteditable="true" class="{{id}}-data-body">{{{json data-body}}}</code></pre>
             {{/if}}
 
             <pre><code class="{{id}}"></code></pre>

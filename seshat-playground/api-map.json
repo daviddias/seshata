@@ -6,8 +6,6 @@
       "method": "GET",
       "data-route": "/api/user",
       "simple-route": "/api/user",
-      "data-body": {},
-      "edit-body": false,
       "data-truncate": "20"   
     },
     {
@@ -15,8 +13,6 @@
       "method": "GET",
       "data-route": "/api/user/foo",
       "simple-route": "/api/user/:username",
-      "data-body": {},
-      "edit-body": false,
       "data-truncate": "20"
     },
     {
@@ -27,7 +23,6 @@
       "data-body": {
           "hello":"world"
         },
-      "edit-body": true,
       "data-truncate": "20"
     },
     {
@@ -38,7 +33,6 @@
       "data-body": {
           "hello":"world"
         },
-      "edit-body": true,
       "data-truncate": "20"
     },
     {
@@ -48,8 +42,7 @@
       "simple-route": "/api/user",
       "data-body": {
           "hello":"world"
-        },
-      "edit-body": true,  
+        }, 
       "data-truncate": "20"
     }
  ] 
