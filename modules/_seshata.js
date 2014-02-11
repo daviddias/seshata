@@ -1,4 +1,4 @@
-buzzardClient = require('buzzard').client;
+buzzardClient = require('buzzard');
 
 $(document).ready(function () {
   // Switch from empty anchors to id-ed headings

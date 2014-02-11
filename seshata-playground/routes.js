@@ -26,7 +26,10 @@ server.route({
   path: '/api/user',
   handler: function(request, reply) {
     console.log('This route uses buzzard auth');
-    buzzard.authenticate(request, function(err, credentials, attributes){
+    buzzard.auth(request, function(err, credentials, attributes){
+      if (err) {
+        console.log('buzzard error', err);
+      }
       reply(users);
     });
   }

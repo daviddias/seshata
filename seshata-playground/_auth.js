@@ -25,27 +25,17 @@ function getCredentials(id, cb) {
 
 // --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --
 
-
-function authenticate(req, cb) {
-  buzzard.authenticate(req, authenticated);
-
+function auth(req, cb) {
   function authenticated(err, credentials, attributes) {
     if (err) {
       cb(err);
-      // res.statusCode = err.response.code;
-      // res.end(err.message);
     } else {
       console.log('user id %s used nonce %s', credentials.id, attributes.nonce);
-
-      // validate nonce...
-
       cb(null, credentials, attributes);
-
-      // res.end('You have access!!!');
     }
   }
 }
 
 
 exports = module.exports = buzzard;
-exports.authenticate = authenticate;
+exports.auth = auth;
