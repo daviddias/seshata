@@ -25,6 +25,15 @@ function copyAssets(_path) {
     }
   });
 
+  // var jsPath = path.join(_path, '/js');
+  // if (!fs.existsSync(jsPath)) {
+  //   fs.mkdirSync(jsPath);
+  // }
+
+  
+
+
+
   ncp(path.join(__dirname, '..', '/assets/js'),
    path.join(_path, '/js'), function (err) {
     if (err) {

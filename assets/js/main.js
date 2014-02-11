@@ -39,6 +39,7 @@ $(document).ready(function () {
     var method = $this.attr('data-method');
     var body = $this.attr('data-body');
 
+    console.log(auth);
     
     $this.click(function () {
       var body_ready;

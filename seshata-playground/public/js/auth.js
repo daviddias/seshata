@@ -1,0 +1,1 @@
+auth = {"buzzard":{"credentials":{"id":"iiiidddd","key":"kkkeeeyyy","algorithm":"sha1"}}};

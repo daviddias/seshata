@@ -18,6 +18,7 @@
                       "console": true,
                       "define": true,
                       "require": true,
-                      "$": true
+                      "$": true,
+                      "auth": true
   }
 }
