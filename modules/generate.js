@@ -31,6 +31,9 @@ function generate(_apiMapPath, _path) {
 
   // bundle the js with keys if needed
   if (!apiMap.auth) {
+    // just placeholders so the request doesn't throw 404
+    fs.writeFileSync(path.join(__dirname, '..', '/assets/js/auth.js'), '');
+    fs.writeFileSync(path.join(_path, '/js/buzzard.js'), '');
     return;
   } else {
     //hacky hacky, kids don't take this as a good example
@@ -38,5 +41,10 @@ function generate(_apiMapPath, _path) {
       path.join(__dirname, '..', '/assets/js/auth.js'),
       'auth = ' + JSON.stringify(apiMap.auth) + ';'
     );
+
+    // browserify _buzzard.js 
+    var b = browserify();
+    b.add(path.join(__dirname, './_buzzard.js'));
+    b.bundle().pipe(fs.createWriteStream(path.join(_path, '/js/buzzard.js')));
   }
 }

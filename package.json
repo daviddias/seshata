@@ -24,6 +24,7 @@
     "ncp": "~0.5.0",
     "handlebars": "~1.3.0",
     "brfs": "~0.1.0",
-    "browserify": "~3.28.1"
+    "browserify": "~3.28.1",
+    "buzzard": "~0.1.2"
   }
 }

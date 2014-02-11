@@ -19,6 +19,7 @@
                       "define": true,
                       "require": true,
                       "$": true,
-                      "auth": true
+                      "auth": true,
+                      "buzzardClient": true
   }
 }
