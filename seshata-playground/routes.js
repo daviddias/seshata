@@ -1,6 +1,8 @@
-var server = require('./index.js');
-var path   = require('path');
-var users  = require('./test-data/users.json');
+var server  = require('./index.js');
+var path    = require('path');
+var users   = require('./test-data/users.json');
+var buzzard = require('./_auth.js');
+
 
 server.route({
   method: 'GET',
@@ -23,7 +25,10 @@ server.route({
   method: 'GET',
   path: '/api/user',
   handler: function(request, reply) {
-    reply(users);
+    console.log('This route uses buzzard auth');
+    buzzard.authenticate(request, function(err, credentials, attributes){
+      reply(users);
+    });
   }
 });
 

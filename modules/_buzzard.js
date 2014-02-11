@@ -1,1 +1,0 @@
-buzzardClient = require('buzzard').client;

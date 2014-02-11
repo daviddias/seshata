@@ -1,3 +1,5 @@
+buzzardClient = require('buzzard').client;
+
 $(document).ready(function () {
   // Switch from empty anchors to id-ed headings
   $('a[name]').get().forEach(function (i) {
@@ -39,9 +41,16 @@ $(document).ready(function () {
     var method = $this.attr('data-method');
     var body = $this.attr('data-body');
 
-    console.log(auth);
-    
+
     $this.click(function () {
+      console.log('1', buzzardClient);
+      console.log('2', auth);
+
+      var header;
+      if (auth){
+        header = buzzardClient.header(auth.buzzard.credentials);
+      }
+
       var body_ready;
 
       if (body !== ''){
@@ -58,6 +67,9 @@ $(document).ready(function () {
         success: function (data) {
           var json = truncate(JSON.stringify(data, null, 2), length);
           $target.text(json);
+        },
+        headers: {
+          'Authorization': header
         }
       });
     });

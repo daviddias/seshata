@@ -49,8 +49,8 @@
  "auth": {
    "buzzard":{
     "credentials":{
-      "id": "iiiidddd",
-      "key": "kkkeeeyyy",
+      "id": "user1",
+      "key": "kkkeeeyyy1",
       "algorithm": "sha1"
     }
    } 
