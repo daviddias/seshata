@@ -1,7 +1,15 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-buzzardClient = require('buzzard');
 
 $(document).ready(function () {
+  // sessionStorage  = code.sessionStorage 
+  buzzardClient = require('buzzard');
+
+  // Store
+  // localStorage.setItem('lastname', 'Smith');
+  // Retrieve
+  // localStorage.getItem('lastname');
+
+
   // Switch from empty anchors to id-ed headings
   $('a[name]').get().forEach(function (i) {
     var $i = $(i);
@@ -42,14 +50,21 @@ $(document).ready(function () {
     var method = $this.attr('data-method');
     var body = $this.attr('data-body');
 
+    var requires_auth = $this.attr('data-requires-auth');
+    var provides_auth = $this.attr('data-provides-auth');
+
 
     $this.click(function () {
-      console.log('1', buzzardClient);
-      console.log('2', auth);
-
       var header;
-      if (auth){
-        header = buzzardClient.header(auth.buzzard.credentials);
+      var credentials;
+      if (requires_auth){
+        credentials = JSON.parse(sessionStorage.getItem('credentials'));
+        if (credentials){
+          console.log(credentials);
+          header = buzzardClient.header(credentials);
+        } else {
+          return alert('you don\'t have credentials yet');
+        }
       }
 
       var body_ready;
@@ -66,6 +81,14 @@ $(document).ready(function () {
         type: method,
         data: body_ready,
         success: function (data) {
+          if(provides_auth){
+            console.log('credentials: ', data);
+            sessionStorage.setItem('credentials', JSON.stringify(data));
+            //
+            // store the credentials
+            //
+          }
+          console.log('REQUEST RECEIVED');
           var json = truncate(JSON.stringify(data, null, 2), length);
           $target.text(json);
         },
@@ -76,7 +99,6 @@ $(document).ready(function () {
     });
   });
 });
-
 },{"buzzard":19}],2:[function(require,module,exports){
 var Buffer = require('buffer').Buffer;
 var intSize = 4;

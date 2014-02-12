@@ -39,15 +39,35 @@ server.route({
   method: 'GET',
   path: '/api/user/{user_id}',
   handler: function(request, reply) {
-    for (var i=0;i<users.length;i++) {
-      if (request.params.user_id === users[i].username){
-        reply(users[i]);
-        return;
+    console.log('This route uses buzzard auth');
+    buzzard.auth(request, function(err, credentials, attributes){
+      if (err) {
+        console.log('buzzard error', err);
       }
-    }
-    reply('user not found').code(404);
+      for (var i=0;i<users.length;i++) {
+        if (request.params.user_id === users[i].username){
+          reply(users[i]);
+          return;
+        }
+      }
+      reply('user not found').code(404);
+    });
   }
 });
+
+server.route({
+  method: 'GET',
+  path: '/api/user/auth',
+  handler: function(request, reply) {
+    console.log('This route offers credentials');
+    reply({
+      id: 'user1',
+      key: 'kkkeeeyyy1',
+      algorithm: 'sha1'
+    });
+  }
+});
+
 
 server.route({
   method: 'POST',

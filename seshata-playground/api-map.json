@@ -6,14 +6,24 @@
       "method": "GET",
       "data-route": "/api/user",
       "simple-route": "/api/user",
-      "data-truncate": "20"   
+      "data-truncate": "20",
+      "requires-auth": true   
     },
     {
       "id": "route-user-foo",
       "method": "GET",
       "data-route": "/api/user/foo",
       "simple-route": "/api/user/:username",
-      "data-truncate": "20"
+      "data-truncate": "20",
+      "requires-auth": true
+    },
+    {
+      "id": "route-user-auth",
+      "method": "GET",
+      "data-route": "/api/user/auth",
+      "simple-route": "/api/user/auth",
+      "data-truncate": "20",
+      "provides-auth": true
     },
     {
       "id": "route-user-post",
@@ -45,14 +55,5 @@
         }, 
       "data-truncate": "20"
     }
- ],
- "auth": {
-   "buzzard":{
-    "credentials":{
-      "id": "user1",
-      "key": "kkkeeeyyy1",
-      "algorithm": "sha1"
-    }
-   } 
- } 
+ ] 
 }

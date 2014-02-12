@@ -26,6 +26,8 @@ function getCredentials(id, cb) {
 // --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --
 
 function auth(req, cb) {
+  buzzard.authenticate(req, authenticated);
+
   function authenticated(err, credentials, attributes) {
     if (err) {
       cb(err);

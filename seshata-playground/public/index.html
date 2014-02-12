@@ -27,6 +27,8 @@
         
           <li class="depth-3"><a href="#route-user-foo">GET /api/user/:username</a></li>
         
+          <li class="depth-3"><a href="#route-user-auth">GET /api/user/auth</a></li>
+        
           <li class="depth-3"><a href="#route-user-post">POST /api/user</a></li>
         
           <li class="depth-3"><a href="#route-user-put">PUT /api/user</a></li>
@@ -43,39 +45,60 @@
         <p>Click on the friendly GET buttons below to try out a few example requests!</p>
         
           <div id="route-user">
-            <h3><a href="#" 
-                   class="btn btn-success btn-lg" 
-                   data-route="/api/user" 
-                   data-target=".route-user" 
-                   data-body=""
-                   data-method="GET"
-                   data-truncate="20">GET</a> /api/user</h3>                   
+            <h3><a  href="#" 
+                    class="btn btn-success btn-lg" 
+                    data-route="/api/user" 
+                    data-target=".route-user" 
+                    data-body=""
+                    data-method="GET"
+                    data-requires-auth="true"  
+                      
+                    data-truncate="20">GET</a> /api/user</h3>                   
             
 
             <pre><code class="route-user"></code></pre>
           </div>
         
           <div id="route-user-foo">
-            <h3><a href="#" 
-                   class="btn btn-success btn-lg" 
-                   data-route="/api/user/foo" 
-                   data-target=".route-user-foo" 
-                   data-body=""
-                   data-method="GET"
-                   data-truncate="20">GET</a> /api/user/:username</h3>                   
+            <h3><a  href="#" 
+                    class="btn btn-success btn-lg" 
+                    data-route="/api/user/foo" 
+                    data-target=".route-user-foo" 
+                    data-body=""
+                    data-method="GET"
+                    data-requires-auth="true"  
+                      
+                    data-truncate="20">GET</a> /api/user/:username</h3>                   
             
 
             <pre><code class="route-user-foo"></code></pre>
           </div>
         
+          <div id="route-user-auth">
+            <h3><a  href="#" 
+                    class="btn btn-success btn-lg" 
+                    data-route="/api/user/auth" 
+                    data-target=".route-user-auth" 
+                    data-body=""
+                    data-method="GET"
+                      
+                    data-provides-auth="true"  
+                    data-truncate="20">GET</a> /api/user/auth</h3>                   
+            
+
+            <pre><code class="route-user-auth"></code></pre>
+          </div>
+        
           <div id="route-user-post">
-            <h3><a href="#" 
-                   class="btn btn-success btn-lg" 
-                   data-route="/api/user" 
-                   data-target=".route-user-post" 
-                   data-body="{'hello':'world'}"
-                   data-method="POST"
-                   data-truncate="20">POST</a> /api/user</h3>                   
+            <h3><a  href="#" 
+                    class="btn btn-success btn-lg" 
+                    data-route="/api/user" 
+                    data-target=".route-user-post" 
+                    data-body="{'hello':'world'}"
+                    data-method="POST"
+                      
+                      
+                    data-truncate="20">POST</a> /api/user</h3>                   
             
             <pre>Request body:<code contenteditable="true" class="route-user-post-data-body">{"hello":"world"}</code></pre>
             
@@ -84,13 +107,15 @@
           </div>
         
           <div id="route-user-put">
-            <h3><a href="#" 
-                   class="btn btn-success btn-lg" 
-                   data-route="/api/user" 
-                   data-target=".route-user-put" 
-                   data-body="{'hello':'world'}"
-                   data-method="PUT"
-                   data-truncate="20">PUT</a> /api/user</h3>                   
+            <h3><a  href="#" 
+                    class="btn btn-success btn-lg" 
+                    data-route="/api/user" 
+                    data-target=".route-user-put" 
+                    data-body="{'hello':'world'}"
+                    data-method="PUT"
+                      
+                      
+                    data-truncate="20">PUT</a> /api/user</h3>                   
             
             <pre>Request body:<code contenteditable="true" class="route-user-put-data-body">{"hello":"world"}</code></pre>
             
@@ -99,13 +124,15 @@
           </div>
         
           <div id="route-user-delete">
-            <h3><a href="#" 
-                   class="btn btn-success btn-lg" 
-                   data-route="/api/user" 
-                   data-target=".route-user-delete" 
-                   data-body="{'hello':'world'}"
-                   data-method="DELETE"
-                   data-truncate="20">DELETE</a> /api/user</h3>                   
+            <h3><a  href="#" 
+                    class="btn btn-success btn-lg" 
+                    data-route="/api/user" 
+                    data-target=".route-user-delete" 
+                    data-body="{'hello':'world'}"
+                    data-method="DELETE"
+                      
+                      
+                    data-truncate="20">DELETE</a> /api/user</h3>                   
             
             <pre>Request body:<code contenteditable="true" class="route-user-delete-data-body">{"hello":"world"}</code></pre>
             

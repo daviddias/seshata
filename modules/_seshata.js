@@ -1,6 +1,7 @@
-buzzardClient = require('buzzard');
 
 $(document).ready(function () {
+  buzzardClient = require('buzzard');
+
   // Switch from empty anchors to id-ed headings
   $('a[name]').get().forEach(function (i) {
     var $i = $(i);
@@ -41,14 +42,21 @@ $(document).ready(function () {
     var method = $this.attr('data-method');
     var body = $this.attr('data-body');
 
+    var requires_auth = $this.attr('data-requires-auth');
+    var provides_auth = $this.attr('data-provides-auth');
+
 
     $this.click(function () {
-      console.log('1', buzzardClient);
-      console.log('2', auth);
-
       var header;
-      if (auth){
-        header = buzzardClient.header(auth.buzzard.credentials);
+      var credentials;
+      if (requires_auth){
+        credentials = JSON.parse(sessionStorage.getItem('credentials'));
+        if (credentials){
+          console.log(credentials);
+          header = buzzardClient.header(credentials);
+        } else {
+          return alert('you don\'t have credentials yet');
+        }
       }
 
       var body_ready;
@@ -65,6 +73,10 @@ $(document).ready(function () {
         type: method,
         data: body_ready,
         success: function (data) {
+          if(provides_auth){
+            console.log('credentials: ', data);
+            sessionStorage.setItem('credentials', JSON.stringify(data));
+          }
           var json = truncate(JSON.stringify(data, null, 2), length);
           $target.text(json);
         },

@@ -28,27 +28,8 @@ function generate(_apiMapPath, _path) {
   var result = template(apiMap);
   fs.writeFileSync(path.resolve(process.cwd(),_path) + '/index.html', result);
 
+  browserifySeshata();
 
-  // bundle the js with keys if needed
-  if (!apiMap.auth) {
-    // just placeholders so the request doesn't throw 404
-    fs.writeFileSync(path.join(__dirname, '..', '/assets/js/auth.js'), '');
-    fs.writeFileSync(path.join(_path, '/js/seshata.js'), '');
-    return;
-  } else {
-    //hacky hacky, kids don't take this as a good example
-    fs.writeFileSync(
-      path.join(__dirname, '..', '/assets/js/auth.js'),
-      'auth = ' + JSON.stringify(apiMap.auth) + ';'
-    );
-
-    // if it is the first time, wait a bit    
-    if (!fs.existsSync(path.join(_path, '/js'))) {
-      setTimeout(browserifySeshata, 1000);
-    } else {
-      browserifySeshata();
-    }
-  }
   function browserifySeshata() {
     // browserify _buzzard.js 
     var b = browserify();

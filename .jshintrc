@@ -20,6 +20,7 @@
                       "require": true,
                       "$": true,
                       "auth": true,
-                      "buzzardClient": true
+                      "buzzardClient": true,
+                      "alert": true
   }
 }

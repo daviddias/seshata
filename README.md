@@ -34,7 +34,7 @@ Map your api in a `api-map.json` file:
     },
     ...
 ```
-full example [here](https://github.com/diasdavid/seshat/blob/master/seshat-playground/api-map.json)
+full example [here](https://github.com/diasdavid/seshata/blob/master/seshata-playground/api-map.json)
 
 Download the module by
 
@@ -67,12 +67,12 @@ $ node index.js
 
 ### Why **seshata**?
 
-![Seshat](http://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Seshat.svg/200px-Seshat.svg.png)
+![Seshata](http://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Seshat.svg/200px-Seshat.svg.png)
 
-"In Egyptian mythology, Seshat (also spelled Safkhet, Sesat, Seshet, Sesheta, and Seshata) was the Ancient Egyptian goddess of wisdom, knowledge, and writing."
+"In Egyptian mythology, Seshata (also spelled Safkhet, Sesat, Seshet, Sesheta, and Seshata) was the Ancient Egyptian goddess of wisdom, knowledge, and writing."
 
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Seshat)
 
 ### Acknowledgements
 
-The original idea for seshat is from [Pedro Teixeira](https://github.com/pgte), he was the one having the vision and suggested me to do it :) Thank you Pedro! Also, it was inspired by the [sls-sample-app-coobook](https://github.com/strongloop/sls-sample-app-cookbook), which uses this interactive technique 
+The original idea for seshata is from [Pedro Teixeira](https://github.com/pgte), he was the one having the vision and suggested me to do it :) Thank you Pedro! Also, it was inspired by the [sls-sample-app-coobook](https://github.com/strongloop/sls-sample-app-cookbook), which uses this interactive technique 

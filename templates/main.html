@@ -35,13 +35,15 @@
         <p>Click on the friendly GET buttons below to try out a few example requests!</p>
         {{#each api-calls}}
           <div id="{{id}}">
-            <h3><a href="#" 
-                   class="btn btn-success btn-lg" 
-                   data-route="{{{data-route}}}" 
-                   data-target=".{{id}}" 
-                   data-body="{{{json-hack data-body}}}"
-                   data-method="{{method}}"
-                   data-truncate="{{data-truncate}}">{{method}}</a> {{{simple-route}}}</h3>                   
+            <h3><a  href="#" 
+                    class="btn btn-success btn-lg" 
+                    data-route="{{{data-route}}}" 
+                    data-target=".{{id}}" 
+                    data-body="{{{json-hack data-body}}}"
+                    data-method="{{method}}"
+                    {{#if requires-auth}}data-requires-auth="{{requires-auth}}"{{/if}}  
+                    {{#if provides-auth}}data-provides-auth="{{provides-auth}}"{{/if}}  
+                    data-truncate="{{data-truncate}}">{{method}}</a> {{{simple-route}}}</h3>                   
             {{#if data-body}}
             <pre>Request body:<code contenteditable="true" class="{{id}}-data-body">{{{json data-body}}}</code></pre>
             {{/if}}
