@@ -1,7 +1,8 @@
 **seshata** - Create your interactive API
 ============
-![](https://david-dm.org/diasdavid/seshata.png)   
 [![Gitter chat](https://badges.gitter.im/diasdavid/seshata.png)](https://gitter.im/diasdavid/seshata)
+[![](https://david-dm.org/diasdavid/seshata.png)](https://david-dm.org/diasdavid/seshata)
+[![devDependency Status](https://david-dm.org/diasdavid/seshata/dev-status.png)](https://david-dm.org/diasdavid/seshata#info=devDependencies)
 
 **seshata** is a new way to document your API, without documenting anything at all! Just let your users try it, live! 
 
