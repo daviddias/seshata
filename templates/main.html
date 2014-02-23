@@ -43,7 +43,7 @@
                     data-method="{{method}}"
                     {{#if requires-auth}}data-requires-auth="{{requires-auth}}"{{/if}}  
                     {{#if provides-auth}}data-provides-auth="{{provides-auth}}"{{/if}}  
-                    data-truncate="{{data-truncate}}">{{method}}</a> {{{simple-route}}}</h3>                   
+                    data-truncate="{{data-truncate}}">{{method}}</a> {{{simple-route}}} {{#if requires-auth}}(Needs Auth){{/if}}{{#if provides-auth}}(Provides Auth){{/if}}</h3>
             {{#if data-body}}
             <pre>Request body:<code contenteditable="true" class="{{id}}-data-body">{{{json data-body}}}</code></pre>
             {{/if}}

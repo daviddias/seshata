@@ -18,12 +18,14 @@ function generate(_apiMapPath, _path) {
   });
 
   Handlebars.registerHelper('json', function(context) {
-    return JSON.stringify(context);
+    return JSON.stringify(context, null, 2);
   });
 
   // augment the .html
   var apiMap = require(path.resolve(process.cwd(), _apiMapPath));
-  var templateSource = fs.readFileSync('../templates/main.html').toString();
+  console.log(path.resolve(__dirname, '../templates/main.html'));
+  var templateSource =
+  fs.readFileSync(path.resolve(__dirname, '../templates/main.html')).toString();
   var template = Handlebars.compile(templateSource);
   var result = template(apiMap);
   fs.writeFileSync(path.resolve(process.cwd(),_path) + '/index.html', result);
@@ -33,7 +35,7 @@ function generate(_apiMapPath, _path) {
   function browserifySeshata() {
     // browserify _buzzard.js 
     var b = browserify();
-    b.add(path.join(__dirname, './_seshata.js'));
+    b.add(path.resolve(__dirname, '_seshata.js'));
     b.bundle().pipe(fs.createWriteStream(path.join(_path, '/js/seshata.js')));
   }
 }

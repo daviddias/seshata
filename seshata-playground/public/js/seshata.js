@@ -1,14 +1,7 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
 $(document).ready(function () {
-  // sessionStorage  = code.sessionStorage 
   buzzardClient = require('buzzard');
-
-  // Store
-  // localStorage.setItem('lastname', 'Smith');
-  // Retrieve
-  // localStorage.getItem('lastname');
-
 
   // Switch from empty anchors to id-ed headings
   $('a[name]').get().forEach(function (i) {
@@ -84,11 +77,7 @@ $(document).ready(function () {
           if(provides_auth){
             console.log('credentials: ', data);
             sessionStorage.setItem('credentials', JSON.stringify(data));
-            //
-            // store the credentials
-            //
           }
-          console.log('REQUEST RECEIVED');
           var json = truncate(JSON.stringify(data, null, 2), length);
           $target.text(json);
         },
