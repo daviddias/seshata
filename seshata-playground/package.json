@@ -4,7 +4,7 @@
   "description": "seshat playground to test",
   "main": "index.js",
   "dependencies": {
-    "hapi": "~2.1.2",
+    "hapi": "~18.1.0",
     "buzzard": "~0.1.2"
   },
   "repository": {
